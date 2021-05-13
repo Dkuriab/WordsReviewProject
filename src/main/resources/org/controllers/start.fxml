@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000033; -fx-background-insets: 2; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,1,3,0.1), 0.5, 0.5, 0, 0);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controllers.StartController">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <Label layoutX="226.0" layoutY="13.0" opacity="0.93" prefHeight="39.0" prefWidth="149.0" text="WordsReview" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Harlow Solid Italic" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" graphicTextGap="0.0" layoutX="561.0" layoutY="3.0" minWidth="36.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="36.0" style="-fx-background-color: #000033;" text="🞬" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Harlow Solid Italic" size="12.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="22.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you have words which you know, you can drop the file here and it will be saved" textAlignment="CENTER" wrappingWidth="554.5469970703125">
+         <font>
+            <Font name="Tw Cen MT Italic" size="21.0" />
+         </font>
+      </Text>
+      <Button fx:id="start_button" layoutX="448.0" layoutY="300.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Start" textFill="WHITE">
+         <font>
+            <Font name="Harlow Solid Italic" size="38.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle fx:id="filePutArea" arcHeight="10.0" arcWidth="10.0" fill="#000033" height="162.0" layoutX="23.0" layoutY="155.0" onDragDropped="#FileAreaDragDropped" onDragOver="#FileAreaDragOver" opacity="0.21" stroke="WHITE" strokeLineJoin="ROUND" strokeType="INSIDE" style="-fx-stroke-dash-array: 5;" width="555.0" />
+      <Button fx:id="choseFileButton" layoutX="23.0" layoutY="338.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: white; -fx-background-radius: 5; -fx-border-radius: 5;" text="Find in foulder" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line endX="598.6787109375" endY="66.69999694824219" startX="-1.220703143189894E-5" startY="66.70001220703125" stroke="#a1a1a140" strokeWidth="3.0" />
+      <Text fx:id="saved_text" fill="#f0f0f0" layoutX="262.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saved!" visible="false">
+         <font>
+            <Font name="Tw Cen MT Bold" size="27.0" />
+         </font>
+      </Text>
+      <Button fx:id="collapse_button" graphicTextGap="0.0" layoutX="525.0" layoutY="3.0" minWidth="36.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="36.0" style="-fx-background-color: #000033;" text="—" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Harlow Solid Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000033; -fx-background-insets: 2; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,1,3,0.1), 0.5, 0.5, 0, 0);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controllers.MainController">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <Pane fx:id="TextField" focusTraversable="true" layoutX="1.0" layoutY="67.0" prefHeight="332.0" prefWidth="598.0" style="-fx-background-color: white; -fx-background-insets: 1; -fx-background-radius: 5;">
+         <children>
+            <Button fx:id="choseFileButton" focusTraversable="false" layoutX="18.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #e78d27; -fx-background-radius: 5; -fx-border-radius: 5;" text="Choose file" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="TextWords" alignment="CENTER" editable="false" focusTraversable="false" layoutX="132.0" layoutY="62.0" prefHeight="25.0" prefWidth="338.0" style="-fx-background-color: white;">
+               <font>
+                  <Font name="Tw Cen MT" size="35.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </TextField>
+            <Text fx:id="drop_file_here_text" fill="#00000038" layoutX="197.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drop file here" textAlignment="CENTER" wrappingWidth="207.73666381835938">
+               <font>
+                  <Font name="Georgia" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </Text>
+            <Text fx:id="file_name_text" fill="#00000099" layoutX="123.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="358.936767578125">
+               <font>
+                  <Font name="Georgia" size="11.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="progress_bar" cache="true" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="14.0" layoutY="317.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="13.0" prefWidth="481.0" progress="0.52" scaleShape="false" style="-fx-accent: #000033; -fx-control-inner-background: null; -fx-padding: 1; -fx-background-insets: 4; -fx-background-color: EDEEF0;" />
+            <Text fx:id="translate_field" fill="#afaaaa" layoutX="134.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="330.1366882324219">
+               <font>
+                  <Font name="Tw Cen MT" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="counter_text" fill="#000033" layoutX="501.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="80.704345703125">
+               <font>
+                  <Font name="Tw Cen MT Bold" size="12.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="filePutArea" arcHeight="10.0" arcWidth="10.0" fill="#ffffff" height="261.0" layoutX="18.0" layoutY="53.0" onDragDropped="#FileAreaDragDropped" onDragExited="#FileAreaDragExited" onDragOver="#FileAreaDragOver" opacity="0.21" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" style="-fx-stroke-dash-array: 5;" width="563.0" />
+            <Button fx:id="Yes" focusTraversable="false" layoutX="129.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #e78d27; -fx-border-radius: 5; -fx-background-radius: 5;" text="Yes" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="11.0" />
+               </font></Button>
+            <Button fx:id="No" focusTraversable="false" layoutX="339.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #e78d27; -fx-background-radius: 5; -fx-border-radius: 5;" text="No" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="11.0" />
+               </font></Button>
+            <Button fx:id="ahead_button" focusTraversable="false" layoutX="520.0" layoutY="53.0" mnemonicParsing="false" opacity="0.21" prefHeight="261.0" prefWidth="62.0" style="-fx-background-color: white;" text="&gt;">
+               <font>
+                  <Font name="MS Gothic" size="33.0" />
+               </font>
+            </Button>
+            <Button fx:id="back_button" focusTraversable="false" layoutX="18.0" layoutY="53.0" mnemonicParsing="false" opacity="0.21" prefHeight="261.0" prefWidth="62.0" style="-fx-background-color: white;" text="&lt;">
+               <font>
+                  <Font name="MS Gothic" size="33.0" />
+               </font>
+            </Button>
+            <Button fx:id="finish_button" focusTraversable="false" layoutX="466.0" layoutY="-5.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Finish" textFill="#000033">
+               <font>
+                  <Font name="Harlow Solid Italic" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane fx:id="settings_pane" opacity="0.9" prefHeight="332.0" prefWidth="598.0" style="-fx-background-color: #000033; -fx-background-insets: 1; -fx-background-radius: 5;" visible="false">
+               <children>
+                  <ToggleButton fx:id="translate_mode" layoutX="16.0" layoutY="59.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="81.0" style="-fx-background-color: #b79a79; -fx-background-radius: 5; -fx-border-radius: 5;" text="Translate" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="dictionary_mode" layoutX="16.0" layoutY="103.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="81.0" style="-fx-background-color: #b79a79; -fx-background-radius: 5; -fx-border-radius: 5;" text="Dictionary" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Text fill="WHITE" layoutX="109.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Translations in out file">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="109.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definitions in out file">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Hyperlink fx:id="subscene_hyperlink" layoutX="14.0" layoutY="277.0" prefHeight="27.0" prefWidth="136.0" text="Subscene.com" textFill="#27ade5">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text fill="WHITE" layoutX="16.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can find subtitles here:">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Line endX="-6.4000244140625" endY="253.4000244140625" layoutX="305.0" layoutY="37.0" startX="-6.4000244140625" startY="-18.599990844726562" stroke="#bdbbff" />
+                  <Button fx:id="add_words" focusTraversable="false" layoutX="503.0" layoutY="60.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="81.0" style="-fx-background-color: #e78d27; -fx-border-radius: 5; -fx-background-radius: 5;" text="Add words" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="vocabulary" focusTraversable="false" layoutX="503.0" layoutY="103.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="81.0" style="-fx-background-color: #e78d27; -fx-border-radius: 5; -fx-background-radius: 5;" text="Vocabulary" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text fill="WHITE" layoutX="308.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expand your vocabulary">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="345.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="See your dictionary">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="clear" focusTraversable="false" layoutX="503.0" layoutY="143.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="81.0" style="-fx-background-color: #c95454; -fx-border-radius: 5; -fx-background-radius: 5;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text fill="WHITE" layoutX="392.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forget words">
+                     <font>
+                        <Font name="Georgia Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="working_on_pane" layoutX="1.0" layoutY="67.0" opacity="0.9" prefHeight="332.0" prefWidth="598.0" style="-fx-background-color: #000033; -fx-background-insets: 1; -fx-background-radius: 5;" visible="false">
+         <children>
+            <ProgressBar fx:id="working_on_progress_bar" cache="true" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="65.0" layoutY="160.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="13.0" prefWidth="469.0" progress="0.0" scaleShape="false" style="-fx-accent: white; -fx-control-inner-background: null; -fx-padding: 1; -fx-background-insets: 4; -fx-background-color: black;" />
+            <Text fx:id="working_on_text" fill="#f0f0f0" layoutX="115.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Working on translates / definitions..." textAlignment="CENTER" wrappingWidth="369.5185546875">
+               <font>
+                  <Font name="Tw Cen MT Italic" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="closeButton" graphicTextGap="0.0" layoutX="561.0" layoutY="3.0" minWidth="36.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="36.0" style="-fx-background-color: #000033;" text="🞬" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Agency FB Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="settings_button" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="36.0" style="-fx-background-color: #000033; -fx-background-radius: 1000;" text="≡" textFill="WHITE">
+         <font>
+            <Font name="Harlow Solid Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="label" fill="WHITE" layoutX="188.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WordsReview" textAlignment="CENTER" wrappingWidth="207.73666381835938">
+         <font>
+            <Font name="Harlow Solid Italic" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="collapse_button" graphicTextGap="0.0" layoutX="526.0" layoutY="3.0" minWidth="36.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="36.0" style="-fx-background-color: #000033;" text="—" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Harlow Solid Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
